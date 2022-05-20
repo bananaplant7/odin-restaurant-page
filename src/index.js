@@ -17,7 +17,7 @@ function header() {
     restaurantName.classList.add('restaurantName')
     tabsContainer.classList.add('tabsContainer')
     homeTab.id = 'homeTab'
-    menuTab.id = 'menuTab'
+    menuTab.id = 'burger'
     contactTab.id = 'contactTab'
     
     // add text content to header elements
@@ -41,3 +41,8 @@ function header() {
 content.appendChild(header())
 
 content.appendChild(homePage());
+
+homeTab.addEventListener('click', () => {
+    content.removeChild(content.lastChild)
+    content.appendChild(homePage());
+})

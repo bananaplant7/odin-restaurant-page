@@ -18,10 +18,11 @@ body {
 }
 
 .headerContainer {
-    background-color: rgba(204, 243, 238, 0.8);
+    background-color: rgba(204, 243, 238, 0.9);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 8vh;
 }
 
 .restaurantName {
@@ -38,17 +39,16 @@ body {
 }
 
 .home {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3rem;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 8rem;
 }
 
 .introContainer {
-    background-color: rgba(249, 206, 238, 0.8);
+    background-color: rgba(249, 206, 238, 0.9);
     border-radius: 10px;
     padding: 1rem;
 }
