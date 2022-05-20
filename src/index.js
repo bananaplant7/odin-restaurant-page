@@ -12,10 +12,13 @@ function header() {
     const menuTab = document.createElement('button');
     const contactTab = document.createElement('button');
 
-    // add classes to header elements
+    // add classes & ids to header elements
     headerContainer.classList.add('headerContainer')
     restaurantName.classList.add('restaurantName')
     tabsContainer.classList.add('tabsContainer')
+    homeTab.id = 'homeTab'
+    menuTab.id = 'menuTab'
+    contactTab.id = 'contactTab'
     
     // add text content to header elements
     restaurantName.textContent = 'Turkish Kebab House'
@@ -38,4 +41,3 @@ function header() {
 content.appendChild(header())
 
 content.appendChild(homePage());
-
