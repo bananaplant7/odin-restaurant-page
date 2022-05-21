@@ -1,5 +1,6 @@
 import './style.css';
 import { homePage } from './homePage';
+import { menuPage } from './menuPage';
 
 const content = document.getElementById('content');
 
@@ -13,18 +14,18 @@ function header() {
     const contactTab = document.createElement('button');
 
     // add classes & ids to header elements
-    headerContainer.classList.add('headerContainer')
-    restaurantName.classList.add('restaurantName')
-    tabsContainer.classList.add('tabsContainer')
-    homeTab.id = 'homeTab'
-    menuTab.id = 'burger'
-    contactTab.id = 'contactTab'
-    
+    headerContainer.classList.add('headerContainer');
+    restaurantName.classList.add('restaurantName');
+    tabsContainer.classList.add('tabsContainer');
+    homeTab.id = 'homeTab';
+    menuTab.id = 'menuTab';
+    contactTab.id = 'contactTab';
+
     // add text content to header elements
-    restaurantName.textContent = 'Turkish Kebab House'
-    homeTab.textContent = 'Home'
-    menuTab.textContent = 'Menu'
-    contactTab.textContent = 'Contact'
+    restaurantName.textContent = 'Turkish Kebab House';
+    homeTab.textContent = 'Home';
+    menuTab.textContent = 'Menu';
+    contactTab.textContent = 'Contact';
 
     // append tabs to tab container
     tabsContainer.appendChild(homeTab);
@@ -38,11 +39,16 @@ function header() {
     return headerContainer;
 }
 
-content.appendChild(header())
+content.appendChild(header());
 
 content.appendChild(homePage());
 
 homeTab.addEventListener('click', () => {
-    content.removeChild(content.lastChild)
+    content.removeChild(content.lastChild);
     content.appendChild(homePage());
-})
+});
+
+menuTab.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    content.appendChild(menuPage());
+});

@@ -1,7 +1,7 @@
 function homePage() {
-    // create main div
-    const main = document.createElement('div');
-    main.classList.add('home');
+    // create homePage div
+    const homePage = document.createElement('div');
+    homePage.classList.add('home');
 
     // create intro container, intro header, intro body
     const introContainer = document.createElement('div');
@@ -19,22 +19,21 @@ function homePage() {
     const review1Bottom = document.createElement('div');
     const review2Bottom = document.createElement('div');
     const review3Bottom = document.createElement('div');
-    
 
     // add classes 
     introContainer.classList.add('introContainer');
     introHeader.classList.add('introHeader');
     introBody.classList.add('introBody');
     reviewContainer.classList.add('reviewContainer');
-    review1.classList.add('review')
-    review2.classList.add('review')
-    review3.classList.add('review')
-    review1Text.classList.add('reviewText')
-    review2Text.classList.add('reviewText')
-    review3Text.classList.add('reviewText')
-    review1Bottom.classList.add('reviewBottom')
-    review2Bottom.classList.add('reviewBottom')
-    review3Bottom.classList.add('reviewBottom')
+    review1.classList.add('review');
+    review2.classList.add('review');
+    review3.classList.add('review');
+    review1Text.classList.add('reviewText');
+    review2Text.classList.add('reviewText');
+    review3Text.classList.add('reviewText');
+    review1Bottom.classList.add('reviewBottom');
+    review2Bottom.classList.add('reviewBottom');
+    review3Bottom.classList.add('reviewBottom');
 
     // add text content
     introHeader.textContent = 'Our Story';
@@ -42,13 +41,13 @@ function homePage() {
     review1Text.textContent = 'Bob: Nice staff, good food, and clean restaurant. Keep it up.';
     review2Text.textContent = 'Alice: The kebabs are delicious and authentic for a fair price and good portions. Highly recommended!';
     review3Text.textContent = 'Kevin: The owner beat me up, but the kebabs are pretty good..';
-    review1Bottom.textContent = '★ ★ ★ ★ ★'
-    review2Bottom.textContent = '★ ★ ★ ★ ★'
-    review3Bottom.textContent = '★ ★ ★ ★ ☆'
+    review1Bottom.textContent = '★ ★ ★ ★ ★';
+    review2Bottom.textContent = '★ ★ ★ ★ ★';
+    review3Bottom.textContent = '★ ★ ★ ★ ☆';
 
     // append intro stuff into intro container
-    introContainer.appendChild(introHeader)
-    introContainer.appendChild(introBody)
+    introContainer.appendChild(introHeader);
+    introContainer.appendChild(introBody);
 
     // append review stuff
     review1.appendChild(review1Text);
@@ -61,11 +60,11 @@ function homePage() {
     reviewContainer.appendChild(review2);
     reviewContainer.appendChild(review3);
 
-    // append restaurant intro & review container to main div
-    main.appendChild(introContainer);
-    main.appendChild(reviewContainer);
+    // append restaurant intro & review container to homePage div
+    homePage.appendChild(introContainer);
+    homePage.appendChild(reviewContainer);
 
-    return main;
+    return homePage;
 }
 
 export { homePage };

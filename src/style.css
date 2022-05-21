@@ -1,9 +1,10 @@
+/***** GENERAL *****/
 @font-face {
     font-family: 'Baskerville';
     src: url('./fonts/LibreBaskerville-Regular.ttf');
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -11,18 +12,19 @@
     padding: 0;
     font-family: 'Baskerville';
 }
+/**********/
 
-body {
-    background: url('./images/priscilla-du-preez.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
 
+
+
+
+/***** HEADER (NAVIGATION BAR) *****/
 .headerContainer {
     background-color: rgba(204, 243, 238, 0.9);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 8vh;
+    min-height: 8vh;
 }
 
 .restaurantName {
@@ -30,14 +32,20 @@ body {
     margin-left: 2rem;
 }
 
-.tabsContainer > * {
+.tabsContainer>* {
     border: none;
     background-color: transparent;
     cursor: pointer;
     margin: 1rem 2rem;
     font-size: 1.5rem;
 }
+/**********/
 
+
+
+
+
+/***** HOME PAGE *****/
 .home {
     height: 92vh;
     display: flex;
@@ -45,6 +53,8 @@ body {
     justify-content: space-evenly;
     gap: 2rem;
     padding: 8rem;
+    background: url('./images/home/people-eating.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .introContainer {
@@ -59,8 +69,8 @@ body {
 }
 
 .introBody {
-   font-size: 1.2rem;
-   line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .reviewContainer {
@@ -87,4 +97,41 @@ body {
     align-self: end;
     justify-self: center;
 }
+/**********/
 
+
+
+
+/***** MENU PAGE *****/
+
+.menu {
+    background-color: #97C4B8;
+   
+}
+
+.menuContainer img {
+    object-fit: cover;
+    width: 25vw;
+    height: 20vw;
+    border-radius: 6px;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+.menuItem {
+    background-color: #F9CEEE;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.menuItemName {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
