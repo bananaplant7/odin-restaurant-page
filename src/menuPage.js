@@ -84,12 +84,12 @@ function menuPage() {
 
 
     // append menu items to menu container & menu container to menuPage
-    menuContainer.appendChild(menuItem1)
-    menuContainer.appendChild(menuItem2)
-    menuContainer.appendChild(menuItem3)
-    menuContainer.appendChild(menuItem4)
-    menuContainer.appendChild(menuItem5)
-    menuContainer.appendChild(menuItem6)
+    menuContainer.appendChild(menuItem1);
+    menuContainer.appendChild(menuItem2);
+    menuContainer.appendChild(menuItem3);
+    menuContainer.appendChild(menuItem4);
+    menuContainer.appendChild(menuItem5);
+    menuContainer.appendChild(menuItem6);
 
     menuPage.appendChild(menuContainer);
 

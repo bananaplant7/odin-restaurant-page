@@ -1,6 +1,7 @@
 import './style.css';
 import { homePage } from './homePage';
 import { menuPage } from './menuPage';
+import { contactPage } from './contactPage';
 
 const content = document.getElementById('content');
 
@@ -43,12 +44,31 @@ content.appendChild(header());
 
 content.appendChild(homePage());
 
+homeTab.classList.add('currentTab');
+
+function removeAllCurrentTab() {
+    homeTab.classList.remove('currentTab');
+    menuTab.classList.remove('currentTab');
+    contactTab.classList.remove('currentTab');
+}
+
 homeTab.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     content.appendChild(homePage());
+    removeAllCurrentTab();
+    homeTab.classList.add('currentTab');
 });
 
 menuTab.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     content.appendChild(menuPage());
+    removeAllCurrentTab();
+    menuTab.classList.add('currentTab');
+});
+
+contactTab.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    content.appendChild(contactPage());
+    removeAllCurrentTab();
+    contactTab.classList.add('currentTab');
 });

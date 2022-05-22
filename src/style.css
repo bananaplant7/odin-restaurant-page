@@ -12,6 +12,7 @@
     padding: 0;
     font-family: 'Baskerville';
 }
+
 /**********/
 
 
@@ -19,6 +20,7 @@
 
 
 /***** HEADER (NAVIGATION BAR) *****/
+
 .headerContainer {
     background-color: rgba(204, 243, 238, 0.9);
     display: flex;
@@ -39,6 +41,15 @@
     margin: 1rem 2rem;
     font-size: 1.5rem;
 }
+
+.tabsContainer>*:hover {
+    color: grey;
+}
+
+.currentTab {
+    text-decoration: underline;
+}
+
 /**********/
 
 
@@ -97,6 +108,7 @@
     align-self: end;
     justify-self: center;
 }
+
 /**********/
 
 
@@ -106,7 +118,6 @@
 
 .menu {
     background-color: #97C4B8;
-   
 }
 
 .menuContainer img {
@@ -119,15 +130,19 @@
 .menuContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 4rem;
-    justify-items: center;
-    row-gap: 2rem;
+    padding: 10rem;
+    row-gap: 5rem;
+    column-gap: 10rem;
+    justify-content: center;
 }
 
 .menuItem {
     background-color: #F9CEEE;
     border-radius: 25px;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menuItemName {
@@ -135,3 +150,42 @@
     text-align: center;
     margin-bottom: 1rem;
 }
+
+/**********/
+
+
+
+
+/***** CONTACT PAGE *****/
+
+.contactContainer {
+    display: grid;
+    justify-content: center;
+    height: 92vh;
+    background-color: #97C4B8;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F9F3EE;
+    place-items: center;
+    padding: 5rem;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+
+}
+
+.contact img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+}
+
+/**********/
